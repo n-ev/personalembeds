@@ -1,14 +1,32 @@
-<div id="datetime"></div>
-<script>
-  function updateDateTime() {
-    var now = new Date();
-    var datetime = now.toLocaleString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true });
-    document.getElementById('datetime').innerHTML = datetime;
-  }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Date and Time</title>
+  <style>
+    #datetime {
+      font-size: 18px;
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div id="datetime"></div>
+  
+  <script>
+    function updateDateTime() {
+      var now = new Date();
+      var datetime = now.toLocaleString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true });
+      document.getElementById('datetime').innerHTML = datetime;
+    }
 
-  // Update date and time every second
-  setInterval(updateDateTime, 1000);
-
-  // Initial call to display date and time immediately
-  updateDateTime();
-</script>
+    // Update date and time every second
+    setInterval(updateDateTime, 1000);
+    
+    // Initial call to display date and time immediately
+    updateDateTime();
+  </script>
+</body>
+</html>
